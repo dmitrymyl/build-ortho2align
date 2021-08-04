@@ -1,0 +1,35 @@
+package:
+  name: ortho2align
+  version: "1.0.0-rc1"
+
+source:
+  git_url: https://github.com/dmitrymyl/ortho2align.git
+  git_rev: v1.0.0-rc1
+
+build:
+  entry_points:
+    - ortho2align = ortho2align.cli_scripts:ortho2align
+
+requirements:
+  build:
+    - python
+    - setuptools
+  
+  host:
+    - python {{ python }}
+
+  run:
+    - python {{ python }}
+    - numpy
+    - pebble
+    - scipy
+    - sortedcontainers 2.1.0
+    - tqdm
+    - ucsc-liftover 377
+    - blast 2.9.0
+
+about:
+  home: https://github.com/dmitrymyl/ortho2align
+  license: GPL-3.0
+  license-file: LICENSE
+  summary: ortho2align is a lncRNA ortholog discovery CLI tool based on syntenic regions and statistical assessment of alignment nonrandomness.
