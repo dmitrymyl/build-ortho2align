@@ -18,12 +18,12 @@ conda recipe for building ortho2align.
 4. Convert the package to osx-64.
     ```{bash}
     cd ..
-    conda convert --platfrom osx-64 linux-64/ortho2align-VERSION-PYVERSION.tar.bz2 -o osx-64
+    conda convert -p osx-64 linux-64/ortho2align-VERSION-PYVERSION.tar.bz2
     ```
 5. Upload osx-64 packages to Anaconda.
     ```{bash}
     cd osx-64
-    anaconda upload *
+    anaconda upload ortho2align-VERSION-PYVERSION.tar.bz2
     ```
 6. Clean build intermediates.
     ```{bash}
